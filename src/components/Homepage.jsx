@@ -6,7 +6,9 @@ import pic3 from '../assets/3.png';
 import Icon1 from '../assets/icon1.png';
 import Icon2 from '../assets/icon2.png';
 import Icon3 from '../assets/icon3.png';
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Homepage() {
   // Array of card data
@@ -16,7 +18,33 @@ function Homepage() {
     { image: pic3, title: 'Land Freight', content: 'Cargo are transported at some stage of their journey along the world’s roads where we...' },
     // Add more card data objects as needed
   ];
-  
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024, // breakpoint for desktop
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768, // breakpoint for tablet/mobile
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
     {/* hero */}
@@ -34,17 +62,17 @@ function Homepage() {
     </div>
     {/* about */}
     <div className="container">
-      <div className="text-center">
+      <div className="text-center" data-aos="fade-up">
           <h2 className='pt-5'>Welcome to Crystal Shipment</h2>
           <div className='bg-red mx-auto'></div>
           <p>Crystal Shipment is more than logistics. We can also optimize your packaging, 
 manage your materials sourcing, and so much more.</p>
       </div>
       <div className="row mt-5">
-        <div className="col-md-6">
+        <div className="col-md-6" data-aos="fade-up">
           <img src={About} className="rounded img-fluid mb-5" alt="about" />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6" data-aos="fade-up">
         <p className='text-danger'>TRANSPORTATION COMPANY</p>
         <h2>We Provide Full Range Logistics Solution</h2>
         <p>We strongly believe that pursuing all of these goals is in our interest and in the interest of all of our stakeholders are us customers, employees, investors and the planet as a whole. We add value to cargo people’s interaction with us, with excellent services or products. Engaging our employees and nurture investment on the stock holds market we show concern , by engaging our employees and nurture investment on the stock holds market we show concern.</p>
@@ -53,16 +81,18 @@ manage your materials sourcing, and so much more.</p>
         </div>
       </div>
 {/* services */}
-      <div className="pt-5 text-center">
+      <div className="pt-5 text-center" data-aos="fade-up">
         <p className='text-danger'> TYPES OF LOGISTICS </p>
         <h2>Covering All Logistics Fields</h2>
       </div>
 
       <div className="mt-5">
       <section className="row">
+      <Slider {...settings}>
         {cardsData.map((card, index) => (
           <div key={index} className="col-md-4 mb-5">
-            <div className="card">
+             <div className="slider-item" style={{ marginRight: '1rem' }}>
+             <div className="card">
               <img src={card.image} className="card-img-top" alt="..." />
               <div className="card-body">
                 <h4 className="card-title ">{card.title}</h4>
@@ -70,20 +100,25 @@ manage your materials sourcing, and so much more.</p>
                 <a href="#" className="text-danger" style={{textDecoration:'none'}}>Read more</a></p>
               </div>
             </div>
+             </div>
           </div>
         ))}
+        </Slider>
       </section>
+    </div>
+    <div className="text-center">
+      <a href="/service" className="btn btn-danger">Load more</a>
     </div>
     </div>
     {/* banner */}
       <div className="bg-warning mt-5 mt-5" style={{ minHeight: '200px', padding: '20px 0' }}>
         <div className="container">
           <div className="row pt-5 d-flex justify-content-center">
-            <div className='col-md-8'>
+            <div className='col-md-8' data-aos="fade-right">
             <h2>Delivering your world one package at a time</h2>
             <p>Crystal Shipment is more than logistics.</p>
             </div>
-            <div className="col-md-4 text-md-end text-sm-start">
+            <div className="col-md-4 text-md-end text-sm-start" data-aos="fade-left">
                <a href='/contact' className="btn btn-danger">Request a Quote</a> 
             </div>
           </div>
@@ -91,7 +126,7 @@ manage your materials sourcing, and so much more.</p>
         </div>
       </div>
 
-      <div className="container mt-5">
+      <div className="container mt-5" data-aos="fade-up">
         <div className="row">
           <div className="col-md-6">
             <h2>WHY CHOOSE US?</h2>

@@ -7,12 +7,19 @@ import Service from './components/Service'
 import Tracking from './components/Tracking'
 import Contact from './components/Contact'
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function App() {
-  
+  useEffect(() => {
+    AOS.init({
+      // Global settings for AOS (optional)
+      duration: 1000,
+      once: true, // Whether animation should happen only once while scrolling down
+    });
+  }, []); // Ensure this useEffect runs only once after component mount
   return (
     <>
     <Header/>

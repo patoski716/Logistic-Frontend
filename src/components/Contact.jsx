@@ -12,7 +12,7 @@ function Contact() {
 
       <div className="container">
         <div className="row">
-          <div className="col-md-4 mt-5">
+          <div className="col-md-4 mt-5" data-aos="fade-up">
             <p className="fw-bold">
               {" "}
               Kindly Call / Chat us or Send us an email.
@@ -44,7 +44,7 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="col-md-8">
+          <div className="col-md-8" data-aos="fade-up">
           <form action="">
             <div className="d-flex mt-3">
               <div className="flex-grow-1 me-2">

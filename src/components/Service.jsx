@@ -30,7 +30,7 @@ function Service() {
         <div className="container mt-5">
         <section className="row">
         {cardsData.map((card, index) => (
-          <div key={index} className="col-md-4 mb-5">
+          <div key={index} className="col-md-4 mb-5" data-aos="fade-up">
             <div className="card">
               <img src={card.image} className="card-img-top" alt="..." />
               <div className="card-body">
@@ -46,10 +46,10 @@ function Service() {
         </div>
         <div className="container mt-5 mb-3">
             <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-6" data-aos="fade-up">
                     <img src={Services} alt="" className="img-fluid" />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6" data-aos="fade-up">
                     <h2>THE COMPLETE SOLUTION</h2>
                     <div className='bg-red'></div>
                     <div className="pt-5">
