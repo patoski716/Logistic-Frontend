@@ -16,11 +16,12 @@ function Homepage() {
     { image: pic3, title: 'Land Freight', content: 'Cargo are transported at some stage of their journey along the world’s roads where we...' },
     // Add more card data objects as needed
   ];
+  
   return (
     <>
     {/* hero */}
     <div className="bg-image">
-        <div className="container text-light">
+        <div className="container text-light ">
             <div className="pt-5 text-center">
             <h1 className='pt-5' style={{fontSize:'48',fontWeight:'bold',marginTop:'60px'}}>
             Easy & Quick Cargo  Shipping Services 
