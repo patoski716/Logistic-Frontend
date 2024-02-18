@@ -28,7 +28,7 @@ function Homepage() {
             </h1>
             <p style={{fontSize:'24px',fontWeight:'700px'}}>Book low cost sea freight shipping services. 
             Get an instant quote.</p>
-            <a href="" className="btn btn-danger">Track Goods Here</a>
+            <a href="/tracking" className="btn btn-danger">Track Goods Here</a>
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@ function Homepage() {
     <div className="container">
       <div className="text-center">
           <h2 className='pt-5'>Welcome to Crystal Shipment</h2>
-          <div className='bg-red'></div>
+          <div className='bg-red mx-auto'></div>
           <p>Crystal Shipment is more than logistics. We can also optimize your packaging, 
 manage your materials sourcing, and so much more.</p>
       </div>
@@ -48,7 +48,7 @@ manage your materials sourcing, and so much more.</p>
         <p className='text-danger'>TRANSPORTATION COMPANY</p>
         <h2>We Provide Full Range Logistics Solution</h2>
         <p>We strongly believe that pursuing all of these goals is in our interest and in the interest of all of our stakeholders are us customers, employees, investors and the planet as a whole. We add value to cargo people’s interaction with us, with excellent services or products. Engaging our employees and nurture investment on the stock holds market we show concern , by engaging our employees and nurture investment on the stock holds market we show concern.</p>
-        <a href="" className="btn btn-danger">Learn More</a>
+        <a href="/service" className="btn btn-danger">Learn More</a>
         
         </div>
       </div>
@@ -61,7 +61,7 @@ manage your materials sourcing, and so much more.</p>
       <div className="mt-5">
       <section className="row">
         {cardsData.map((card, index) => (
-          <div key={index} className="col-md-4 mb-3">
+          <div key={index} className="col-md-4 mb-5">
             <div className="card">
               <img src={card.image} className="card-img-top" alt="..." />
               <div className="card-body">
@@ -84,7 +84,7 @@ manage your materials sourcing, and so much more.</p>
             <p>Crystal Shipment is more than logistics.</p>
             </div>
             <div className="col-md-4 text-md-end text-sm-start">
-               <div className="btn btn-danger">Request a Quote</div> 
+               <a href='/contact' className="btn btn-danger">Request a Quote</a> 
             </div>
           </div>
           
