@@ -9,6 +9,7 @@ import Icon3 from '../assets/icon3.png';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Form from './Form';
 
 function Homepage() {
   // Array of card data
@@ -163,30 +164,7 @@ manage your materials sourcing, and so much more.</p>
           <div className="col-md-6">
             <h2>REQUEST A QUOTE</h2>
 
-            <form action="">
-            <div className="d-flex mt-3">
-              <div className="flex-grow-1 me-2">
-              <input type="text" className="form-control" placeholder='Name' />
-              </div>
-              <div className="flex-grow-1 ms-2">
-              <input type="email" className="form-control" placeholder='Email' />
-              </div>
-            </div>
-
-            <div className="d-flex mt-3">
-              <div className="flex-grow-1 me-2">
-              <input type="text" className="form-control" placeholder='Phone (Optional)' />
-              </div>
-              <div className="flex-grow-1 ms-2">
-              <input type="text" className="form-control" placeholder='Subject' />
-              </div>
-            </div>
-
-            <textarea name="" id="" className='form-control mt-3' placeholder='Enter your message here' cols="30" rows="10"></textarea>
-            <div className="mt-3">
-              <button className="btn btn-danger">Submit</button>
-            </div>
-            </form>
+            <Form/>
 
           </div>
         </div>

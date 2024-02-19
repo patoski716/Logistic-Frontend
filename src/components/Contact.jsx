@@ -1,4 +1,5 @@
 import React from 'react'
+import Form from './Form'
 
 function Contact() {
   return (
@@ -44,31 +45,8 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="col-md-8" data-aos="fade-up">
-          <form action="">
-            <div className="d-flex mt-3">
-              <div className="flex-grow-1 me-2">
-              <input type="text" className="form-control" placeholder='Name' />
-              </div>
-              <div className="flex-grow-1 ms-2">
-              <input type="email" className="form-control" placeholder='Email' />
-              </div>
-            </div>
-
-            <div className="d-flex mt-3">
-              <div className="flex-grow-1 me-2">
-              <input type="text" className="form-control" placeholder='Phone (Optional)' />
-              </div>
-              <div className="flex-grow-1 ms-2">
-              <input type="text" className="form-control" placeholder='Subject' />
-              </div>
-            </div>
-
-            <textarea name="" id="" className='form-control mt-3' placeholder='Enter your message here' cols="30" rows="10"></textarea>
-            <div className="mt-3">
-              <button className="btn btn-danger">Submit</button>
-            </div>
-            </form>
+          <div className="col-md-8 mt-5" data-aos="fade-up">
+          <Form/>
           </div>
         </div>
       </div>
