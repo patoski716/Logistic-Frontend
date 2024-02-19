@@ -50,7 +50,7 @@ function Homepage() {
     {/* hero */}
     <div className="bg-image">
         <div className="container text-light ">
-            <div className="pt-5 text-center">
+            <div className="pt-5 text-center" data-aos="fade-in">
             <h1 className='pt-5' style={{fontSize:'48',fontWeight:'bold',marginTop:'60px'}}>
             Easy & Quick Cargo  Shipping Services 
             </h1>
