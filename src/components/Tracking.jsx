@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Tracking() {
-    const [trackingId, setTrackingId] = useState('');
+  const [trackingId, setTrackingId] = useState('');
   const [error, setError] = useState('');
 
   const handleInputChange = (e) => {
@@ -11,7 +11,7 @@ function Tracking() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!trackingId.trim()) {
-        setError('Please enter a valid tracking ID.');
+        setError('Please enter a valid Tracking ID.');
       } else if (trackingId.trim().length !== 10) {
         setError('Tracking ID must be exactly 10 characters long.');
       } else {
@@ -42,7 +42,7 @@ function Tracking() {
                 </div>
                 <div className="col-md-6" data-aos="fade-up">
                 <form action="" onSubmit={handleSubmit}>
-                    <input type="text" placeholder='Enter your tracking ID Here' className="form-control mt-3 mb-3" value={trackingId} 
+                    <input type="text" placeholder='Enter your Tracking ID Here' className="form-control mt-3 mb-3" value={trackingId} 
                 onChange={handleInputChange}/>
                 {error && <div className="text-danger">{error}</div>}
 
