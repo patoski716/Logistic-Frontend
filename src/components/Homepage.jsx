@@ -6,9 +6,7 @@ import pic3 from '../assets/3.png';
 import Icon1 from '../assets/icon1.png';
 import Icon2 from '../assets/icon2.png';
 import Icon3 from '../assets/icon3.png';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 function Homepage() {
   // Array of card data
@@ -18,32 +16,7 @@ function Homepage() {
     { image: pic3, title: 'Land Freight', content: 'Cargo are transported at some stage of their journey along the world’s roads where we...' },
     // Add more card data objects as needed
   ];
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024, // breakpoint for desktop
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768, // breakpoint for tablet/mobile
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  
 
   return (
     <>
@@ -88,10 +61,10 @@ manage your materials sourcing, and so much more.</p>
 
       <div className="mt-5">
       <section className="row">
-      <Slider {...settings}>
+      
         {cardsData.map((card, index) => (
           <div key={index} className="col-md-4 mb-5">
-             <div className="slider-item" style={{ marginRight: '1rem' }}>
+             <div className="slider-item" >
              <div className="card">
               <img src={card.image} className="card-img-top" alt="..." />
               <div className="card-body">
@@ -103,7 +76,7 @@ manage your materials sourcing, and so much more.</p>
              </div>
           </div>
         ))}
-        </Slider>
+        
       </section>
     </div>
     <div className="text-center">
