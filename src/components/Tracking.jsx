@@ -1,6 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 function Tracking() {
+    const [trackingId, setTrackingId] = useState('');
+  const [error, setError] = useState('');
+
+  const handleInputChange = (e) => {
+    setTrackingId(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!trackingId.trim()) {
+        setError('Please enter a valid tracking ID.');
+      } else if (trackingId.trim().length !== 10) {
+        setError('Tracking ID must be exactly 10 characters long.');
+      } else {
+        setError('');
+        alert('You have to connect to an API before it will work');
+      // Process tracking logic here
+      console.log('Tracking ID:', trackingId);
+      window.location.href = '/';
+
+    }
+  };
   return (
     <>
     <div className="cover">
@@ -19,8 +41,13 @@ function Tracking() {
                     </div>
                 </div>
                 <div className="col-md-6" data-aos="fade-up">
-                <input type="email" placeholder='Enter your tracking ID Here' className="form-control mt-3 mb-3" />
+                <form action="" onSubmit={handleSubmit}>
+                    <input type="text" placeholder='Enter your tracking ID Here' className="form-control mt-3 mb-3" value={trackingId} 
+                onChange={handleInputChange}/>
+                {error && <div className="text-danger">{error}</div>}
+
                 <button className="btn btn-danger">Track</button>
+                </form>
                 </div>
             </div>
         </div>
