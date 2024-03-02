@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function Form() {
     const [formData, setFormData] = useState({
@@ -39,15 +40,21 @@ function Form() {
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Process form submission
-      alert('Message sent Successfully')
-      
-      console.log(formData);
-      // Redirect to another page
-      window.location.href = '/contact';
+
+      try {
+        const response = await axios.post('http://localhost:8000/postcontact/', formData);
+        console.log('Form submitted:', response.data);
+        // Assuming the form submission was successful, you can handle it here
+        alert('Message sent Successfully');
+        // Redirect to another page
+        window.location.href = '/contact';
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        // Handle error accordingly
+      }
     }
   };
 
