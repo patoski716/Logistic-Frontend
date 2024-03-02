@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
 function Form() {
     const [formData, setFormData] = useState({
         name: '',
@@ -11,6 +12,7 @@ function Form() {
     });
     
     const [errors, setErrors] = useState({});
+    
 
     const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,6 +41,7 @@ function Form() {
     setErrors(errors);
     return Object.keys(errors).length === 0;
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,8 +52,8 @@ function Form() {
         console.log('Form submitted:', response.data);
         // Assuming the form submission was successful, you can handle it here
         alert('Message sent Successfully');
-        // Redirect to another page
-        window.location.href = '/contact';
+        // page reload
+        window.location.reload();
       } catch (error) {
         console.error('Error submitting form:', error);
         // Handle error accordingly
