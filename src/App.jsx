@@ -16,8 +16,7 @@ function App() {
   useEffect(() => {
     AOS.init({
       // Global settings for AOS (optional)
-      duration: 3000,
-      once: true, // Whether animation should happen only once while scrolling down
+      duration: 3000
     });
   }, []); // Ensure this useEffect runs only once after component mount
   return (
